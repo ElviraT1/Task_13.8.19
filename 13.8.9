@@ -1,0 +1,20 @@
+t = int(input('Сколько нужно билетов?\n'))
+cost = 0
+
+for i in range(t):
+    age = int(input('Сколько вам лет?\n'))
+    if age < 18:
+        print('Поздравляем! Билет бесплатный))\n')
+    elif 18 <= age <= 24:
+        cost += 990
+        print('Ваш билет стоит 990 руб\n')
+    else:
+        cost += 1390
+        print('Ваш билет стоит 1390 руб\n')
+
+if t > 3:
+    cost -= cost*10/100
+    print('Вам подарок! Скидка 10%')
+    print(f'К оплате со скидкой: {cost}')
+else:
+    print(f'К оплате: {cost}')
